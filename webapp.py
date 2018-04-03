@@ -8,6 +8,10 @@ app.debug = True #Change this to False for production
 @app.route('/')
 def home():
     return render_template('home.html')
+	
+@app.route('/update_div1')
+def update():
+	return Markup('<p>This text came from the server.</p>')
 
 if __name__ == '__main__':
     app.run()
